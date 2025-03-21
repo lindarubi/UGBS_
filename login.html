@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - UGBS</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Estilos personalizados -->
+    <style>
+        body {
+            height: 100vh; /* Ocupa toda la altura de la pantalla */
+            background: url('imag/fondo_UGBS.png') no-repeat center center/cover; /* Imagen de fondo */
+            display: flex;
+            align-items: center; /* Centra verticalmente */
+            justify-content: center; /* Centra horizontalmente */
+        }
+        .login-container {
+            max-width: 400px;
+            width: 100%;
+            padding: 2rem;
+            background: rgba(255, 255, 255, 0.9); /* Fondo blanco con transparencia */
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra suave */
+        }
+        .logo {
+            text-align: center;
+            margin-bottom: 1.5rem;
+        }
+        .logo img {
+            max-width: 150px;
+            height: auto;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Contenedor del Login -->
+    <div class="login-container">
+        <!-- Logo -->
+        <div class="logo">
+            <img src="imag/imagen1.png" alt="Logo de UGBS" class="img-fluid">
+        </div>
+
+        <!-- Formulario de Login -->
+        <form>
+            <!-- Campo de Usuario -->
+            <div class="mb-3">
+                <label for="username" class="form-label">Usuario</label>
+                <input type="text" class="form-control" id="username" placeholder="Ingresa tu usuario" required>
+            </div>
+
+            <!-- Campo de Contraseña -->
+            <div class="mb-3">
+                <label for="password" class="form-label">Contraseña</label>
+                <input type="password" class="form-control" id="password" placeholder="Ingresa tu contraseña" required>
+            </div>
+
+            <!-- Botón de Iniciar Sesión -->
+            <div class="d-grid">
+                <button type="submit" class="btn btn-primary" href="index.html">Iniciar Sesión</button>
+            </div>
+        </form>
+    </div>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

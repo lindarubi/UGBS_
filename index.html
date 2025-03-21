@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UGBS - Universidad GBS A.C.</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Estilos personalizados (opcional) -->
+    <style>
+        .welcome-image, .news-image {
+            border-radius: 10px;
+            margin-top: 20px;
+        }
+        .news-image {
+            max-width: 50%;
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        /* Estilo para el carrusel */
+        .carousel-item img {
+            border-radius: 10px;
+            height: 900px; /* Tamaño fijo para las imágenes */
+            width: 100%; /* Ajusta el ancho al 100% del contenedor */
+            object-fit: cover; /* Asegura que las imágenes cubran el espacio */
+        }
+        /* Estilo para resaltar el enlace activo */
+        .navbar-nav .nav-link.active {
+            font-weight: bold;
+            color: #fff !important; /* Color blanco */
+            background-color: rgba(255, 255, 255, 0.1); /* Fondo semi-transparente */
+            border-radius: 5px;
+        }
+        /* Estilo para la imagen antes del carrusel */
+        .imagen-previa {
+            width: 100%;
+            max-height: 300px; /* Ajusta la altura máxima */
+            object-fit: cover; /* Asegura que la imagen cubra el espacio */
+            border-radius: 10px;
+            margin-bottom: 20px; /* Espacio entre la imagen y el carrusel */
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Cabecera -->
+    <header class="bg-white shadow-sm py-3">
+        <div class="container d-flex justify-content-between align-items-center">
+            <!-- Logo y Título -->
+            <h1 class="d-flex align-items-center mb-0">
+                <img src="imag/imagen1.png" alt="Logo de la Universidad" class="me-3" style="max-height: 80px;">
+                UGBS - Universidad GBS A.C.
+            </h1>
+
+            <!-- Botones de Inicio de Sesión y Registro -->
+            <div class="header-buttons">
+                <a href="login.html" class="btn btn-primary">Iniciar Sesión</a>
+                <a href="registro.html" class="btn btn-outline-primary">Registrarse</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Navegación -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+        <div class="container">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#" id="inicio-link">Inicio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#" id="acerca-link">Acerca de</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#" id="eventos-link">Eventos</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#" id="oferta-link">Oferta Académica</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Cuerpo Principal -->
+    <main class="container py-4" id="main-content">
+        <!-- Contenido dinámico se cargará aquí -->
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white text-center py-3">
+        <p class="mb-0">&copy; 2025 Universidad GBS A.C. - Todos los derechos reservados.</p>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Script para manejar el cambio de contenido -->
+    <script>
+        // Función para cargar el contenido de "Inicio"
+        function cargarInicio() {
+            const mainContent = document.getElementById("main-content");
+            mainContent.innerHTML = `
+                <div class="row">
+                    <!-- Sección 1: Bienvenida -->
+                    <div class="col-md-8">
+                        <div class="section mb-4 p-4 bg-white rounded shadow">
+                            <h2>Bienvenido a la Universidad GBS A.C.</h2>
+                            <p>Explora nuestras opciones académicas y servicios estudiantiles.</p>
+                            
+                            <!-- Imagen antes del carrusel -->
+                            <img src="imag/info.jpg" alt="Imagen previa al carrusel" class="imagen-previa">
+
+                            <!-- Carrusel de Imágenes -->
+                            <div id="carouselExample" class="carousel slide" data-bs-ride="carousel" data-bs-interval="3000">
+                                <div class="carousel-inner">
+                                    <div class="carousel-item active">
+                                        <img src="imag/arq.jpg" class="d-block w-100" alt="Imagen 2 del carrusel">
+                                    </div>
+                                    <div class="carousel-item">
+                                        <img src="imag/ing.jpg" class="d-block w-100" alt="Imagen 3 del carrusel">
+                                    </div>
+                                    <div class="carousel-item">
+                                        <img src="imag/bachiller.jpg" class="d-block w-100" alt="Imagen 3 del carrusel">
+                                    </div>    
+                                    <div class="carousel-item">
+                                        <img src="imag/edu.jpg" class="d-block w-100" alt="Imagen 3 del carrusel">
+                                    </div>
+                                    <div class="carousel-item">
+                                        <img src="imag/fisica.jpg" class="d-block w-100" alt="Imagen 3 del carrusel">
+                                    </div>
+                                    <div class="carousel-item">
+                                        <img src="imag/arquitectura.jpg" class="d-block w-100" alt="Imagen 3 del carrusel">
+                                    </div>
+                                    <div class="carousel-item">
+                                        <img src="imag/trabajo.jpg" class="d-block w-100" alt="Imagen 3 del carrusel">
+                                    </div>
+                                    <div class="carousel-item">
+                                        <img src="imag/infoad.jpg" class="d-block w-100" alt="Imagen 3 del carrusel">
+                                    </div>
+                                    <div class="carousel-item">
+                                        <img src="imag/derecho.jpg" class="d-block w-100" alt="Imagen 3 del carrusel">
+                                    </div>
+                                </div>
+                                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+                                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                    <span class="visually-hidden">Anterior</span>
+                                </button>
+                                <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+                                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                    <span class="visually-hidden">Siguiente</span>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Sección 2: Noticias -->
+                    <div class="col-md-4">
+                        <div class="section mb-4 p-4 bg-white rounded shadow">
+                            <h2>Noticias</h2>
+                            <p>Estudia con nosotros la Licenciatura en Arquitectura y Diseño de Interiores, contamos con validez oficial, no lo pienses más y sé parte de esta gran institución. Tenemos promociones durante este mes.</p>
+                            <img src="imag/lic.jpg" alt="Noticias UGBS" class="news-image img-fluid">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Sección 3: Enlaces Rápidos -->
+                <div class="section mb-4 p-4 bg-white rounded shadow">
+                    <h2>Enlaces Rápidos</h2>
+                    <ul class="list-unstyled">
+                        <li><a href="#" class="text-decoration-none">Calendario Académico</a></li>
+                        <li><a href="#" class="text-decoration-none">Biblioteca Virtual</a></li>
+                        <li><a href="#" class="text-decoration-none">Contacto</a></li>
+                    </ul>
+                </div>
+            `;
+        }
+
+        // Función para cargar el contenido de "Acerca de"
+        function cargarAcercaDe() {
+            const mainContent = document.getElementById("main-content");
+            mainContent.innerHTML = `
+                <div class="section mb-4 p-4 bg-white rounded shadow">
+                    <h2>Acerca de la Universidad GBS A.C.</h2>
+                    <p>La meta de la Universidad Gilberto Barrera Sánchez es ser la institución Educativa en la que se imparten además del Bachillerato General, Carreras Universitarias a Nivel Licenciatura, y Posgrados, todas debidamente avaladas y reconocidas por la Secretaria de Educación Guerrero, así como por la Dirección General de Profesiones.</p>
+                    <p>Contar con la más selecta plantilla de catedráticos, garantizando la excelencia académica que postula como premisa de su quehacer educativo. Nuestra oferta educativa busca diversidad de actividades en los rubros más necesarios en el mercado laboral y con mayor proyección a futuro.</p>
+                    <h4>Misión</h4>
+                    <p>La misión de la Universidad Gilberto Barrera Sánchez consiste en garantizar la formación de profesionales y especialistas con el más alto nivel académico capaces para dar respuestas a los principales problemas de la sociedad, y que participen activamente en los cambios y económicos globales, a fin de alcanzar su progreso mediante la verdad, la justicia y la libertad. Fomentar la ciencia estimulando las investigaciones, la cultura, el arte, el deporte, el espíritu emprendedor, los valores humanos y universales como la solidaridad, ética profesional, justicia social y su formación integral.</p>
+                    <h4>Visión</h4>
+                    <p>La Universidad Lic. Gilberto Barrera Sánchez A.C. tiene la visión de ser la Universidad líder de la Región de la Montaña Baja, de alcance Estatal y con Proyección Nacional, proporcionando una Educación Media Superior, Superior y de Posgrado con valor duradero y sostenible, reconociendo al ser humano como un todo, inseparable de cuerpo, mente y espíritu.</p>
+                    <h4>Código de Valores</h4>
+                    <ol>
+                        <li><strong>Ética Profesional:</strong> Para los catedráticos, alumnos y los egresados de la Universidad asuman una actitud positiva hacia el trabajo, un comportamiento responsable y moral durante el desempeño de su actividad profesional.</li>
+                        <li><strong>Lealtad:</strong> Con la Universidad de todos los que la integramos, ser fieles al compromiso de defender lo que creemos y actuar de manera congruente con la palabra dada.</li>
+                        <li><strong>Verdad:</strong> Para promover la búsqueda continua de lo cierto como fundamento de las ciencias y de las relaciones entre los individuos.</li>
+                        <li><strong>Probidad:</strong> Para fomentar la práctica de la rectitud, la integridad y la honradez en el pensar, decir y actuar.</li>
+                        <li><strong>Justicia:</strong> Para dar a cada uno lo que le corresponde, así como mejorar la distribución e igualdad de oportunidades para una vida digna.</li>
+                        <li><strong>Generosidad:</strong> Para ofrecer a otros lo más preciado de sí mismo, buscando el bien de los demás, sin esperar nada a cambio.</li>
+                        <li><strong>Gratitud:</strong> Para estimar y reconocer el beneficio o favor que se nos ha hecho o ha querido hacer y corresponder a ese acto de generosidad de manera positiva.</li>
+                        <li><strong>Honestidad Intelectual:</strong> Para promover el respeto a la producción cultural, artística, científica y tecnológica de los miembros de la comunidad.</li>
+                        <li><strong>Rigor Académico:</strong> Para que los universitarios asuman un compromiso con la precisión, la objetividad y la seriedad en el desarrollo de las tareas que conducen a la búsqueda permanente de lo verdadero.</li>
+                        <li><strong>Amor al Trabajo:</strong> Para que los integrantes de la comunidad universitaria asuman un mayor compromiso con la institución, las funciones y tareas que realiza, los servicios que ofrece, la disciplina y la responsabilidad.</li>
+                        <li><strong>Responsabilidad Social:</strong> Para que la Universidad cumpla responsablemente con la formación profesional de los estudiantes y su participación en el estudio y solución de los problemas de la comunidad, así como en la gestión del conocimiento, en cuanto a la investigación, producción, difusión del saber.</li>
+                    </ol>
+                </div>
+            `;
+        }
+
+        // Función para cargar el contenido de "Eventos"
+        <!-- Función para cargar el contenido de "Eventos" -->
+function cargarEventos() {
+    const mainContent = document.getElementById("main-content");
+    mainContent.innerHTML = `
+        <div class="section mb-4 p-4 bg-white rounded shadow">
+            <h2>Eventos</h2>
+            <p>Próximos eventos en la Universidad GBS A.C.:</p>
+
+            <!-- Carrusel de Eventos -->
+            <div id="carouselEventos" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-inner">
+                    <!-- Evento 1 -->
+                    <div class="carousel-item active">
+                        <img src="imag/confe.jpg" class="d-block w-100" alt="Conferencia de Innovación">
+                        <div class="carousel-caption d-none d-md-block bg-dark p-3 rounded">
+                            <h5>Conferencia sobre Innovación Tecnológica</h5>
+                            <p>15 de Octubre - Auditorio Principal</p>
+                        </div>
+                    </div>
+
+                    <!-- Evento 2 -->
+                    <div class="carousel-item">
+                        <img src="imag/empleo.jpg" class="d-block w-100" alt="Feria de Empleo">
+                        <div class="carousel-caption d-none d-md-block bg-dark p-3 rounded">
+                            <h5>Feria de Empleo</h5>
+                            <p>20 de Octubre - Plaza Central</p>
+                        </div>
+                    </div>
+
+                    <!-- Evento 3 -->
+                    <div class="carousel-item">
+                        <img src="imag/emp.jpg" class="d-block w-100" alt="Taller de Emprendimiento">
+                        <div class="carousel-caption d-none d-md-block bg-dark p-3 rounded">
+                            <h5>Taller de Emprendimiento</h5>
+                            <p>25 de Octubre - Sala de Conferencias</p>
+                        </div>
+                    </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselEventos" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Anterior</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselEventos" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Siguiente</span>
+                </button>
+            </div>
+        </div>
+    `;
+}
+
+        <!-- Función para cargar el contenido de "Oferta Académica" -->
+function cargarOfertaAcademica() {
+    const mainContent = document.getElementById("main-content");
+    mainContent.innerHTML = `
+        <div class="section mb-4 p-4 bg-white rounded shadow">
+            <h2>Oferta Académica</h2>
+            <p>Explora nuestros programas académicos:</p>
+    <div class="row">
+        <!-- Card 1: Arquitectura -->
+        <div class="col-md-4 mb-4">
+            <div class="card h-100">
+                <img src="imag/arquitectura.jpg" class="card-img-top" alt="Arquitectura">
+                <div class="card-body">
+                    <h5 class="card-title">Licenciatura en Arquitectura y Diseño de Interiores</h5>
+                    <p class="card-text">Formamos profesionales creativos y técnicos en diseño y construcción de espacios.</p>
+                    <a href="#" class="btn btn-primary">Más información</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Card 2: Ingeniería en Sistemas -->
+        <div class="col-md-4 mb-4">
+            <div class="card h-100">
+                <img src="imag/ing.jpg" class="card-img-top" alt="Ingeniería en Sistemas">
+                <div class="card-body">
+                    <h5 class="card-title">Licenciatura en Ingeniería en Sistemas Computacionales</h5>
+                    <p class="card-text">Desarrolla soluciones tecnológicas innovadoras para el mundo digital.</p>
+                    <a href="#" class="btn btn-primary">Más información</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Card 3: Ciencias de la Educación -->
+        <div class="col-md-4 mb-4">
+            <div class="card h-100">
+                <img src="imag/edu.jpg" class="card-img-top" alt="Ciencias de la Educación">
+                <div class="card-body">
+                    <h5 class="card-title">Licenciatura en Ciencias de la Educación</h5>
+                    <p class="card-text">Formamos profesionales capaces de transformar el sistema educativo con enfoques innovadores.</p>
+                    <a href="#" class="btn btn-primary">Más información</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Card 4: Cultura y Deportes -->
+        <div class="col-md-4 mb-4">
+            <div class="card h-100">
+                <img src="imag/fisica.jpg" class="card-img-top" alt="Cultura y Deportes">
+                <div class="card-body">
+                    <h5 class="card-title">Licenciatura en Cultura y Deportes</h5>
+                    <p class="card-text">Fomenta el desarrollo cultural y deportivo con un enfoque integral y profesional.</p>
+                    <a href="#" class="btn btn-primary">Más información</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Card 5: Derecho -->
+        <div class="col-md-4 mb-4">
+            <div class="card h-100">
+                <img src="imag/derecho.jpg" class="card-img-top" alt="Derecho">
+                <div class="card-body">
+                    <h5 class="card-title">Licenciatura en Derecho</h5>
+                    <p class="card-text">Formamos abogados comprometidos con la justicia y el bienestar social.</p>
+                    <a href="#" class="btn btn-primary">Más información</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Card 6: Trabajo Social -->
+        <div class="col-md-4 mb-4">
+            <div class="card h-100">
+                <img src="imag/trabajo.jpg" class="card-img-top" alt="Trabajo Social">
+                <div class="card-body">
+                    <h5 class="card-title">Licenciatura en Trabajo Social</h5>
+                    <p class="card-text">Contribuye al desarrollo social y comunitario con herramientas profesionales.</p>
+                    <a href="#" class="btn btn-primary">Más información</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Card 7: Bachillerato -->
+        <div class="col-md-4 mb-4">
+            <div class="card h-100">
+                <img src="imag/bachiller.jpg" class="card-img-top" alt="Bachillerato">
+                <div class="card-body">
+                    <h5 class="card-title">Bachillerato General</h5>
+                    <p class="card-text">Prepara a los estudiantes para la educación superior con una formación integral.</p>
+                    <a href="#" class="btn btn-primary">Más información</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Card 8: Criminología -->
+        <div class="col-md-4 mb-4">
+            <div class="card h-100">
+                <img src="imag/crimi.jpg" class="card-img-top" alt="Criminología">
+                <div class="card-body">
+                    <h5 class="card-title">Licenciatura en Criminología</h5>
+                    <p class="card-text">Estudia el fenómeno criminal y contribuye a la prevención y solución de problemas sociales.</p>
+                    <a href="#" class="btn btn-primary">Más información</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+     </div>
+    `;
+}
+
+        // Función para resaltar el enlace activo
+        function resaltarEnlaceActivo(id) {
+            // Remover la clase "active" de todos los enlaces
+            document.querySelectorAll(".navbar-nav .nav-link").forEach(enlace => {
+                enlace.classList.remove("active");
+            });
+            // Agregar la clase "active" al enlace seleccionado
+            document.getElementById(id).classList.add("active");
+        }
+
+        // Event listeners para los enlaces de navegación
+        document.getElementById("inicio-link").addEventListener("click", function(event) {
+            event.preventDefault(); // Evita que el enlace recargue la página
+            cargarInicio();
+            resaltarEnlaceActivo("inicio-link"); // Resaltar el enlace de Inicio
+        });
+
+        document.getElementById("acerca-link").addEventListener("click", function(event) {
+            event.preventDefault();
+            cargarAcercaDe();
+            resaltarEnlaceActivo("acerca-link"); // Resaltar el enlace de Acerca de
+        });
+
+        document.getElementById("eventos-link").addEventListener("click", function(event) {
+            event.preventDefault();
+            cargarEventos();
+            resaltarEnlaceActivo("eventos-link"); // Resaltar el enlace de Eventos
+        });
+
+        document.getElementById("oferta-link").addEventListener("click", function(event) {
+            event.preventDefault();
+            cargarOfertaAcademica();
+            resaltarEnlaceActivo("oferta-link"); // Resaltar el enlace de Oferta Académica
+        });
+
+        // Cargar el contenido de "Inicio" por defecto al abrir la página
+        cargarInicio();
+    </script>
+</body>
+</html>

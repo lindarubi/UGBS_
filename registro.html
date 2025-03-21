@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro - UGBS</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Estilos personalizados -->
+    <style>
+        html, body {
+            height: 100%; /* Asegura que el body y html ocupen toda la altura */
+            margin: 0;
+            padding: 0;
+        }
+        body {
+            background-image: url('imag/fondo_UGBS.png'); /* Ruta de la imagen de fondo */
+            background-size: cover; /* Cubre toda la pantalla */
+            background-position: center; /* Centra la imagen */
+            background-repeat: no-repeat; /* Evita que se repita */
+            background-attachment: fixed; /* Fija la imagen de fondo */
+            display: flex;
+            justify-content: center; /* Centra horizontalmente */
+          
+        }
+        .registration-form {
+            max-width: 600px;
+            width: 100%;
+            height: 160vh;
+            padding: 20px;
+            background-color: rgba(255, 255, 255, 0.9); /* Fondo semi-transparente */
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .registration-form h2 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .form-label {
+            font-weight: bold;
+        }
+        .btn-primary {
+            width: 100%;
+            padding: 10px;
+            font-size: 1.1rem;
+        }
+        .logo {
+            text-align: center; /* Centra la imagen */
+            margin-bottom: 20px; /* Espacio entre la imagen y el título */
+        }
+        .logo img {
+            max-width: 150px; /* Tamaño máximo de la imagen */
+            height: auto; /* Mantiene la proporción de la imagen */
+            border-radius: 10px; /* Bordes redondeados */
+        }
+    </style>
+</head>
+<body>
+    <!-- Formulario de Registro -->
+    <div class="registration-form">
+        <!-- Logo de UGBS -->
+        <div class="logo">
+            <img src="imag/imagen1.png" alt="Logo de UGBS">
+        </div>
+
+        <h2>Registro en UGBS</h2>
+        <form>
+            <!-- Nombre Completo -->
+            <div class="mb-3">
+                <label for="nombreCompleto" class="form-label">Nombre Completo</label>
+                <input type="text" class="form-control" id="nombreCompleto" placeholder="Ingresa tu nombre completo" required>
+            </div>
+
+            <!-- Correo Electrónico -->
+            <div class="mb-3">
+                <label for="correoElectronico" class="form-label">Correo Electrónico</label>
+                <input type="email" class="form-control" id="correoElectronico" placeholder="Ingresa tu correo electrónico" required>
+            </div>
+
+            <!-- Contraseña -->
+            <div class="mb-3">
+                <label for="contrasena" class="form-label">Contraseña</label>
+                <input type="password" class="form-control" id="contrasena" placeholder="Crea una contraseña" required>
+            </div>
+
+            <!-- Confirmar Contraseña -->
+            <div class="mb-3">
+                <label for="confirmarContrasena" class="form-label">Confirmar Contraseña</label>
+                <input type="password" class="form-control" id="confirmarContrasena" placeholder="Confirma tu contraseña" required>
+            </div>
+
+            <!-- Fecha de Nacimiento -->
+            <div class="mb-3">
+                <label for="fechaNacimiento" class="form-label">Fecha de Nacimiento</label>
+                <input type="date" class="form-control" id="fechaNacimiento" required>
+            </div>
+
+            <!-- Género -->
+            <div class="mb-3">
+                <label class="form-label">Género</label>
+                <div>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="genero" id="masculino" value="masculino" required>
+                        <label class="form-check-label" for="masculino">Masculino</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="genero" id="femenino" value="femenino" required>
+                        <label class="form-check-label" for="femenino">Femenino</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="genero" id="otro" value="otro" required>
+                        <label class="form-check-label" for="otro">Otro</label>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Programa de Interés -->
+            <div class="mb-3">
+                <label for="programaInteres" class="form-label">Programa de Interés</label>
+                <select class="form-select" id="programaInteres" required>
+                    <option value="" selected disabled>Selecciona un programa</option>
+                    <option value="arquitectura">Arquitectura y Diseño de Interiores</option>
+                    <option value="sistemas">Ingeniería en Sistemas Computacionales</option>
+                    <option value="educacion">Ciencias de la Educación</option>
+                    <option value="derecho">Derecho</option>
+                    <option value="trabajoSocial">Trabajo Social</option>
+                    <option value="criminologia">Criminología</option>
+                    <option value="bachillerato">Bachillerato</option>
+                </select>
+            </div>
+
+            <!-- Términos y Condiciones -->
+            <div class="mb-3 form-check">
+                <input type="checkbox" class="form-check-input" id="terminos" required>
+                <label class="form-check-label" for="terminos">Acepto los <a href="#">términos y condiciones</a></label>
+            </div>
+
+            <!-- Botón de Registro -->
+            <button type="submit" class="btn btn-primary">Registrarse</button>
+        </form>
+    </div>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
